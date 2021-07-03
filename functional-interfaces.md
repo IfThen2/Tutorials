@@ -103,12 +103,12 @@ R apply(T t);
 Since a primitive type can’t be a generic type argument, there are versions of the `Function` interface for all possible combinations of argument and return types for the most commonly used data types `double`, `int`, and `long`.
 
 ##### Figure 1.1
-            | int                 | long                 | double               | generic              
-------------|---------------------|----------------------|----------------------|----------------------
- **int**    | X               | _IntToLongFunction_    | _IntToDoubleFunction_  | _IntFunction_          
- **long**   | _LongToIntFunction_   | **X**                | _LongToDoubleFunction_ | _LongFunction_         
- **double** | _DoubleToIntFunction_ | _DoubleToLongFunction_ | **X**                | _DoubleFunction_       
- **generic**| _ToIntFunction_       | _ToLongFunction_       | _ToDoubleFunction_     | **X**                
+|            | **int**               | **long**               | **double**               | **generic**      |      
+|   :---:    |         :---:         |        :---:           |        :---:             |    :---:         |
+| **int**    | **X**                 | _IntToLongFunction_    | _IntToDoubleFunction_    | _IntFunction_    |        
+| **long**   | _LongToIntFunction_   | **X**                  | _LongToDoubleFunction_   | _LongFunction_   |        
+| **double** | _DoubleToIntFunction_ | _DoubleToLongFunction_ | **X**                    | _DoubleFunction_ |      
+| **generic**| _ToIntFunction_       | _ToLongFunction_       | _ToDoubleFunction_       | **X**            |            
 
 
 
