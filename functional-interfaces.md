@@ -389,21 +389,21 @@ Again, since a primitive type can’t be a generic type argument, there are vers
 
 ## 6.0 Conclusion
 
-Full matrix of JDP supplied functional interfaces by param and return type.
+Full matrix of JDK supplied functional interfaces by param and return type.
 
 
 
-|         | **double**               | **int**                 | **long**                 | **boolean**         | **float** | **char** | **byte** | **generic**        | **void**           |
-|:---------:|:----------------------:|:---------------------:|:----------------------:|:-----------------:|:-------:|:------:|:------:|:----------------:|:----------------:|
-| **double**  | _DoubleUnaryOperator_  | _DoubleToIntFunction_ | _DoubleToLongFunction_ | _DoublePredicate_ | **X**   | **X**  | **X**  | _DoubleFunction_ | _DoubleConsumer_ |
-| **int**     | _IntToDoubleFunction_  | _IntUnaryOperator_    | _IntToLongFunction_    | _IntPredicate_    | **X**   | **X**  | **X**  | _IntFunction_    | _IntConsumer_    |
-| **long**    | _LongToDoubleFunction_ | _LongToIntFunction_   | _LongUnaryOperator_    | _LongPredicate_   | **X**   | **X**  | **X**A  | _LongFunction_   | _LongConsumer_   |
-| **boolean** | **X**                  | **X**                 | **X**                  | **X**             | **X**   | **X**  | **X**  | **X**            | **X**           |
-| **float**   | **X**                  | **X**                 | **X**                  | **X**             | **X**   | **X**  | **X**  | **X**            | **X**            |
-| **char**    | **X**                 | **X**                 | **X**                  | **X**             | **X**   | **X**  | **X**  | **X**            | **X**            |
-| **byte**    | **X**                  | **X**                 | **X**                  | **X**             | **X**   | **X**  | **X**  | **X**            | **X**            |
-| **generic** | _ToDoubleFunction_     | _ToIntFunction_       | _ToLongFunction_       | _Predicate_       | **X**   | **X**  | **X**  | _Function_       | _Consumer_       |
-| **void**    | _DoubleSupplier_       | _IntSupplier_         | _LongSupplier_         | _BooleanSupplier_ | **X**   | **X**  | **X**  | _Supplier_       | **X**            |
+|             | **double**             | **int**               | **long**               | **boolean**       | **float** | **char** | **byte** | **generic**        |     **void**     |
+|:-----------:|:----------------------:|:---------------------:|:----------------------:|:-----------------:|:---------:|:--------:|:--------:|:------------------:|:----------------:|
+| **double**  | _DoubleUnaryOperator_  | _DoubleToIntFunction_ | _DoubleToLongFunction_ | _DoublePredicate_ | **X**     | **X**    | **X**    | _DoubleFunction_   | _DoubleConsumer_ |
+| **int**     | _IntToDoubleFunction_  | _IntUnaryOperator_    | _IntToLongFunction_    | _IntPredicate_    | **X**     | **X**    | **X**    | _IntFunction_      | _IntConsumer_    |
+| **long**    | _LongToDoubleFunction_ | _LongToIntFunction_   | _LongUnaryOperator_    | _LongPredicate_   | **X**     | **X**    | **X**    | _LongFunction_     | _LongConsumer_   |
+| **boolean** | **X**                  | **X**                 | **X**                  | **X**             | **X**     | **X**    | **X**    | **X**              | **X**            |
+| **float**   | **X**                  | **X**                 | **X**                  | **X**             | **X**     | **X**    | **X**    | **X**              | **X**            |
+| **char**    | **X**                  | **X**                 | **X**                  | **X**             | **X**     | **X**    | **X**    | **X**              | **X**            |
+| **byte**    | **X**                  | **X**                 | **X**                  | **X**             | **X**     | **X**    | **X**    | **X**              | **X**            |
+| **generic** | _ToDoubleFunction_     | _ToIntFunction_       | _ToLongFunction_       | _Predicate_       | **X**     | **X**    | **X**    | _Function_         | _Consumer_       |
+| **void**    | _DoubleSupplier_       | _IntSupplier_         | _LongSupplier_         | _BooleanSupplier_ | **X**     | **X**    | **X**    | _Supplier_         | **X**            |
 
 
 
