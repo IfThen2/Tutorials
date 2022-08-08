@@ -2,20 +2,48 @@
 
 ---
 
-## 1.0 Overview:
+## Collector Overview:
 
-`Collector` represents a special reduction operation using a mutable container. Elements are
-incorporated by updating the state of this mutable container, rather than by replacing the result.
-This is desirable behavior when we want to reduce a Stream into some sort of `Collection`. It would
-be very inefficient to create a new `Collection` Object during every step of the reduction (*as is
-typical in reduction operations*), so we can use `Collector` to avoid that.
+`Collector` represents a special mutable reduction operation. Elements are incorporated by updating
+the state of a mutable container rather than by replacing the intermediate result. This is desirable
+behavior when we want to reduce a Stream into some sort of `Collection`. It would be very
+inefficient to create a new `Collection` Object during every step of the reduction (*as is typical
+in reduction operations*), so we can use `Collector` to avoid that. We'll dive deeper into  
+*collection* vs *reduction* in a separate tutorial. For now, let's take a look at the pieces that
+make up a `Collector`.
 
-## 1.1 Visualize it
+<h3 style="text-align: center;">Container Supplier</h3>
+
+Creates a new mutable result container
+
+![Container Supplier](src/main/resources/collector/supplier.png "Container Supplier")
+
+<h3 style="text-align: center;">Accumulator</h3>
+
+Incorporates data elements into the result container
+
+![Accumulator](src/main/resources/collector/accumulator.png "Accumulator")
+
+<h3 style="text-align: center;">Combiner</h3>
+
+Combines two result containers
+
+![Combiner ](src/main/resources/collector/combiner.png "Combiner")
+
+<h3 style="text-align: center;">Finisher</h3>
+
+Performs optional final transformation
+
+![Finisher](src/main/resources/collector/finisher.png "Finisher")
+
+---
+
+## A Visual Breakdown
 
 Let's breakdown a simple Stream collection process to help understand the different components.
 
-![Collector Visualized](src/main/resources/10.png "Collector Visualized")
-<br></br>
+![Collector Visualized](src/main/resources/collector/samplebreakdown.png "Collector Visualized")
+
 ---
 
 ## 1.2 What Are The Rules?
@@ -34,7 +62,7 @@ equivalently during parallel and sequential execution.
 > ```
 > -- <cite>JavaDoc</cite>
 
-![The Identity Constraint](src/main/resources/12.png "The Identity Constraint")
+![The Identity Constraint](src/main/resources/collector/identityconstraint.png "The Identity Constraint")
 
 ### The Associativity Constraint
 
@@ -53,17 +81,27 @@ equivalently during parallel and sequential execution.
 > ```
 > -- <cite>JavaDoc</cite>
 
-![The Associativity Constraint](src/main/resources/13.png "The Associativity Constraint")
+![The Associativity Constraint](src/main/resources/collector/associativityconstraint.png "The Associativity Constraint")
 
-<br></br>
+
 
 ---
 
-## 1.3 Some Examples:
+## A Collection of Collectors:
+
+Now that we have a feel for the different components of a `Collector`, let's take a look at some of
+the JDK supplied Collectors.
 
 ### JDK Convenience Collectors
 
-![JDK Collectors](src/main/resources/11.png "JDK Collectors")
+![JDK Collectors](src/main/resources/collector/jdkcollectors.png "JDK Collectors")
 
-### 1.3.2 Build Your Own
+### Build Your Own:
+
+What if none of the supplied Collectors meet our needs? In that case, implementing our own should be
+no problem!
+
+```java
+
+```
 
