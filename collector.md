@@ -4,29 +4,47 @@
 
 <h2 style="text-align: center;">Collector Overview:</h2>
 
-`Collector` represents a special mutable reduction operation. Elements are incorporated by updating
-the state of a mutable container rather than by replacing the intermediate result. This is desirable
-behavior when we want to reduce a Stream into some sort of `Collection`. It would be very
+`Collector` represents a special *mutable* reduction operation. Elements are incorporated by
+updating the state of a mutable container rather than by replacing the intermediate result. This is
+desirable behavior when we want to reduce a Stream into some sort of `Collection`. It would be very
 inefficient to create a new `Collection` Object during every step of the reduction (*as is typical
-in reduction operations*), so we can use `Collector` to avoid that. We'll dive deeper into  
-*collection* vs *reduction* in a separate tutorial. For now, let's take a look at the pieces that
-make up a `Collector`.
+in reduction operations*), so we can use `Collector` to avoid that.
+
+We'll dive deeper into *collection* vs *reduction* in a separate tutorial. For now, let's take a
+look at the pieces that make up a `Collector`.
 
 ### 1. Container Supplier
 
-Creates a new mutable result container
-
 ![Container Supplier](src/main/resources/collector/supplier.png "Container Supplier")
+
+The container supplier is responsible for creating a new mutable container for the result. It has
+the following abstract method signature:
+
+```java
+Supplier<A> supplier();
+```
 
 ### 2. Accumulator
 
-Incorporates data elements into the result container
-
 ![Accumulator](src/main/resources/collector/accumulator.png "Accumulator")
+
+The accumulator incorporates data elements into the result container. It has the following abstract
+method signature:
+
+```java
+BiConsumer<A, T> accumulator();
+```
 
 ### 3. Combiner
 
-Combines two result containers
+The combiner used (in the Stream framework) during parallel execution. Separate threads will process
+separate sections of the stream, accumulating their partial result into a mutable container. Those
+containers eventually need to be combined into one single result, hence the combiner BinaryOperator.
+It has the following abstract method signature:
+
+```java
+BinaryOperator<A> combiner();
+```
 
 ![Combiner ](src/main/resources/collector/combiner.png "Combiner")
 
@@ -87,10 +105,10 @@ equivalently during parallel and sequential execution.
 
 ---
 
-## A Collection of Collectors:
+<h2 style="text-align: center;">_A Collection of Collectors_</h2>
 
-Now that we have a feel for the different components of a `Collector`, let's take a look at some of
-the JDK supplied Collectors.
+Now that we have a feel for the different components of a `Collector`, let's take a look at just a
+few of the JDK supplied Collectors.
 
 ### JDK Convenience Collectors
 
@@ -102,6 +120,54 @@ What if none of the supplied Collectors meet our needs? In that case, implementi
 no problem!
 
 ```java
+public class ImmutableListCollector<T> implements Collector<T, List<T>, ImmutableList<T>> {
 
+    @Override
+    public Supplier<List<T>> supplier() {
+        return ArrayList::new;
+    }
+
+    @Override
+    public BiConsumer<List<T>, T> accumulator() {
+        return List::add;
+    }
+
+    @Override
+    public BinaryOperator<List<T>> combiner() {
+        return (l1, l2) -> {
+            l1.addAll(l2);
+            return l1;
+        };
+    }
+
+    @Override
+    public Function<List<T>, ImmutableList<T>> finisher() {
+        return ImmutableList::copyOf;
+    }
+
+    @Override
+    public Set<Characteristics> characteristics() {
+        return Collections.emptySet();
+    }
+
+    public static <T> ImmutableListCollector<T> toImmutableList() {
+        return new ImmutableListCollector<>();
+    }
+}
 ```
+
+---
+
+<h2 style="text-align: center;">_Resources / Further Reading_</h2>
+
+https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html
+
+https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.Characteristics.html
+
+https://apprize.best/javascript/lambda/6.html
+
+https://www.baeldung.com/java-8-collectors
+
+
+
 
