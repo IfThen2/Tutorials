@@ -1,12 +1,8 @@
-# Java 8 Collector
+<h1 style="text-align: center;">Java 8 Collector Guide</h1>
 
 ---
 
-<div style="text-align: center;">
-
-## Collector Overview:
-
-</div>
+<h2 style="text-align: center;">Collector Overview:</h2>
 
 `Collector` represents a special mutable reduction operation. Elements are incorporated by updating
 the state of a mutable container rather than by replacing the intermediate result. This is desirable
@@ -16,49 +12,33 @@ in reduction operations*), so we can use `Collector` to avoid that. We'll dive d
 *collection* vs *reduction* in a separate tutorial. For now, let's take a look at the pieces that
 make up a `Collector`.
 
-<h2 style="text-align: center;">1. Container Supplier</h2>
+### 1. Container Supplier
 
 Creates a new mutable result container
 
-<div style="text-align: center;">
-
 ![Container Supplier](src/main/resources/collector/supplier.png "Container Supplier")
 
-</div>
-
-<h2 style="text-align: center;">2. Accumulator</h2>
+### 2. Accumulator
 
 Incorporates data elements into the result container
 
-<div style="text-align: center;">
-
 ![Accumulator](src/main/resources/collector/accumulator.png "Accumulator")
 
-</div>
-
-<h2 style="text-align: center;">3. Combiner</h2>
+### 3. Combiner
 
 Combines two result containers
 
-<div style="text-align: center;">
-
 ![Combiner ](src/main/resources/collector/combiner.png "Combiner")
 
-</div>
-
-<h2 style="text-align: center;">4. Finisher</h2>
+### 4. Finisher
 
 Performs optional final transformation
 
-<div style="text-align: center;">
-
 ![Finisher](src/main/resources/collector/finisher.png "Finisher")
-
-</div>
 
 ---
 
-<h2 style="text-align: center;">A Visual Breakdown</h2>
+<h2 style="text-align: center;">_A Visual Breakdown_</h2>
 
 Let's breakdown a simple Stream collection process to help understand the different components.
 
@@ -66,7 +46,7 @@ Let's breakdown a simple Stream collection process to help understand the differ
 
 ---
 
-## What Are The Rules?
+<h2 style="text-align: center;">_What Are The Rules?_</h2>
 
 > To ensure that sequential and parallel executions produce equivalent results, the collector functions must satisfy an identity and an associativity constraints.
 > -- <cite>JavaDoc</cite>
