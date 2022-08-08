@@ -2,7 +2,11 @@
 
 ---
 
+<div style="text-align: center;">
+
 ## Collector Overview:
+
+</div>
 
 `Collector` represents a special mutable reduction operation. Elements are incorporated by updating
 the state of a mutable container rather than by replacing the intermediate result. This is desirable
@@ -12,33 +16,49 @@ in reduction operations*), so we can use `Collector` to avoid that. We'll dive d
 *collection* vs *reduction* in a separate tutorial. For now, let's take a look at the pieces that
 make up a `Collector`.
 
-<h3 style="text-align: center;">Container Supplier</h3>
+<h2 style="text-align: center;">1. Container Supplier</h2>
 
 Creates a new mutable result container
 
+<div style="text-align: center;">
+
 ![Container Supplier](src/main/resources/collector/supplier.png "Container Supplier")
 
-<h3 style="text-align: center;">Accumulator</h3>
+</div>
+
+<h2 style="text-align: center;">2. Accumulator</h2>
 
 Incorporates data elements into the result container
 
+<div style="text-align: center;">
+
 ![Accumulator](src/main/resources/collector/accumulator.png "Accumulator")
 
-<h3 style="text-align: center;">Combiner</h3>
+</div>
+
+<h2 style="text-align: center;">3. Combiner</h2>
 
 Combines two result containers
 
+<div style="text-align: center;">
+
 ![Combiner ](src/main/resources/collector/combiner.png "Combiner")
 
-<h3 style="text-align: center;">Finisher</h3>
+</div>
+
+<h2 style="text-align: center;">4. Finisher</h2>
 
 Performs optional final transformation
 
+<div style="text-align: center;">
+
 ![Finisher](src/main/resources/collector/finisher.png "Finisher")
+
+</div>
 
 ---
 
-## A Visual Breakdown
+<h2 style="text-align: center;">A Visual Breakdown</h2>
 
 Let's breakdown a simple Stream collection process to help understand the different components.
 
@@ -46,7 +66,7 @@ Let's breakdown a simple Stream collection process to help understand the differ
 
 ---
 
-## 1.2 What Are The Rules?
+## What Are The Rules?
 
 > To ensure that sequential and parallel executions produce equivalent results, the collector functions must satisfy an identity and an associativity constraints.
 > -- <cite>JavaDoc</cite>
