@@ -50,21 +50,29 @@ BinaryOperator<A> combiner();
 
 ### 4. Finisher
 
-Performs optional final transformation
+Performs optional final transformation. Collectors may set (*and the majority do*)
+the `IDENTITY_TRANSFORM` characteristic, in which case the finishing transformation is an identity
+function with an unchecked cast from `A` to `R`.
 
 ![Finisher](src/main/resources/collector/finisher.png "Finisher")
 
 ---
 
-<h2 style="text-align: center;">_A Visual Breakdown_</h2>
+<h2 style="text-align: center;">A Visual Breakdown</h2>
 
 Let's breakdown a simple Stream collection process to help understand the different components.
 
-![Collector Visualized](src/main/resources/collector/samplebreakdown.png "Collector Visualized")
+### Serial Collection:
+
+![Serial Collection](src/main/resources/collector/serialcollection.svg "Serial Collection")
+
+### Parallel Collection:
+
+![Parallel Collection](src/main/resources/collector/parallelcollection.svg "Parallel Collection")
 
 ---
 
-<h2 style="text-align: center;">_What Are The Rules?_</h2>
+<h2 style="text-align: center;">What Are The Rules?</h2>
 
 > To ensure that sequential and parallel executions produce equivalent results, the collector functions must satisfy an identity and an associativity constraints.
 > -- <cite>JavaDoc</cite>
@@ -117,7 +125,10 @@ few of the JDK supplied Collectors.
 ### Build Your Own:
 
 What if none of the supplied Collectors meet our needs? In that case, implementing our own should be
-no problem!
+no problem! Let's create a `Collector` similar to `Collectors.toList`, but that applies a finishing
+step of copying the mutable result container into an `ImmutableList`.
+
+![Custom Collector](src/main/resources/collector/customcollectortable.png "JDK Collectors")
 
 ```java
 public class ImmutableListCollector<T> implements Collector<T, List<T>, ImmutableList<T>> {
@@ -160,13 +171,17 @@ public class ImmutableListCollector<T> implements Collector<T, List<T>, Immutabl
 
 <h2 style="text-align: center;">_Resources / Further Reading_</h2>
 
-https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html
+* https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html
 
-https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.Characteristics.html
+* https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.Characteristics.html
 
-https://apprize.best/javascript/lambda/6.html
+* https://apprize.best/javascript/lambda/6.html
 
-https://www.baeldung.com/java-8-collectors
+* https://www.baeldung.com/java-8-collectors
+
+* https://dkeenan.com/Lambda/
+
+* https://www.amazon.com/Mock-Mocking-Bird-Including-Combinatory-ebook/dp/B00A1P096Y/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=
 
 
 
