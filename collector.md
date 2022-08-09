@@ -113,7 +113,7 @@ equivalently during parallel and sequential execution.
 
 ---
 
-<h2 style="text-align: center;">_A Collection of Collectors_</h2>
+<h2 style="text-align: center;">A Collection of Collectors</h2>
 
 Now that we have a feel for the different components of a `Collector`, let's take a look at just a
 few of the JDK supplied Collectors.
