@@ -10,8 +10,8 @@ desirable behavior when we want to reduce a Stream into some sort of `Collection
 inefficient to create a new `Collection` Object during every step of the reduction (*as is typical
 in reduction operations*), so we can use `Collector` to avoid that.
 
-We'll dive deeper into *collection* vs *reduction* in a separate tutorial. For now, let's take a
-look at the pieces that make up a `Collector`.
+We'll dive deeper into the finer points of *collection* vs *reduction* in a separate tutorial. For
+now, let's take a look at the pieces that make up a `Collector`.
 
 ### 1. Container Supplier
 
@@ -169,7 +169,7 @@ public class ImmutableListCollector<T> implements Collector<T, List<T>, Immutabl
 
 ---
 
-<h2 style="text-align: center;">_Resources / Further Reading_</h2>
+<h2 style="text-align: center;">Resources / Further Reading</h2>
 
 * https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collector.html
 
