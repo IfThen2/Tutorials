@@ -82,15 +82,25 @@ equivalently during parallel and sequential execution.
 
 ### The Identity Constraint
 
+<p align="center">
+
+![The Identity Constraint](src/main/resources/collector/identityconstraint.svg "The Identity Constraint")
+
+</p>
+
 > The identity constraint says that for any partially accumulated result, combining it with an empty result container must produce an equivalent result. That is, for a partially accumulated result a that is the result of any series of accumulator and combiner invocations, a must be equivalent to
 > ```java
 > combiner.apply(a, supplier.get())
 > ```
 > -- <cite>JavaDoc</cite>
 
-![The Identity Constraint](src/main/resources/collector/identityconstraint.png "The Identity Constraint")
-
 ### The Associativity Constraint
+
+<p align="center">
+
+![The Associativity Constraint](src/main/resources/collector/associativityconstraint.svg "The Associativity Constraint")
+
+</p>
 
 > The associativity constraint says that splitting the computation must produce an equivalent result. That is, for any input elements t1 and t2, the results r1 and r2 in the computation below must be equivalent:
 > ```java
@@ -106,9 +116,6 @@ equivalently during parallel and sequential execution.
 > R r2 = finisher.apply(combiner.apply(a2, a3));  // result with splitting
 > ```
 > -- <cite>JavaDoc</cite>
-
-![The Associativity Constraint](src/main/resources/collector/associativityconstraint.png "The Associativity Constraint")
-
 
 
 ---
