@@ -1,5 +1,7 @@
 <h1 style="text-align: center;">Java 8 Collector Guide</h1>
 
+![Collector Title](src/main/resources/collector/jason-leung-D4YrzSwyIEc-unsplash.jpg "Collector Title")
+
 ---
 
 <h2 style="text-align: center;">Collector Overview:</h2>
