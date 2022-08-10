@@ -56,19 +56,24 @@ BinaryOperator<A> combiner();
 
 <h2 style="text-align: center;">Finisher</h2>
 
-Performs optional final transformation. Collectors may set (*and the majority do*)
-the `IDENTITY_TRANSFORM` characteristic, in which case the finishing transformation is an identity
-function with an unchecked cast from `A` to `R`.
-
 <p align="center">
   <img src="src/main/resources/collector/finisher.svg" alt="Finisher">
 </p>
 
+Performs optional final transformation. Collectors may set (*and the majority do*)
+the `IDENTITY_TRANSFORM` characteristic, in which case the finishing transformation is an identity
+function with an unchecked cast from `A` to `R`. It has the following abstract method signature:
+
+```java
+Function<A, R> finisher();
+```
+
 ---
 
-<h2 style="text-align: center;">A Visual Breakdown</h2>
+<h2 style="text-align: center;">An Example Visualized</h2>
 
-Let's breakdown a simple Stream collection process to help understand the different components.
+Let's breakdown an example Stream collection process to help understand the different components.
+Note the differences between serial and parallel execution.
 
 ### Serial Collection:
 
@@ -135,6 +140,56 @@ few of the JDK supplied Collectors.
 
 <p align="center">
   <img src="src/main/resources/collector/jdkcollectornotes.svg" alt="JDK Collectors Notes">
+</p>
+
+### Collecting into Maps
+
+In order to collect into a `Map`, we basically need to upgrade our accumulator into a higher order
+function, composed of three other functions. These "sub" functions are:
+
+<h3 style="text-align: center;">Key Mapper</h3>
+
+<p align="center">
+  <img src="src/main/resources/collector/keymapper.svg" alt="Key Mapper">
+</p>
+
+The container supplier is responsible for creating a new mutable container for the result. It has
+the following abstract method signature:
+
+```java
+Supplier<A> supplier();
+```
+
+<h3 style="text-align: center;">Value Mapper</h3>
+
+<p align="center">
+  <img src="src/main/resources/collector/valuemapper.svg" alt="Value Mapper">
+</p>
+
+The container supplier is responsible for creating a new mutable container for the result. It has
+the following abstract method signature:
+
+```java
+Supplier<A> supplier();
+```
+
+<h3 style="text-align: center;">Merger</h3>
+
+<p align="center">
+  <img src="src/main/resources/collector/merger.svg" alt="Merger">
+</p>
+
+The container supplier is responsible for creating a new mutable container for the result. It has
+the following abstract method signature:
+
+```java
+Supplier<A> supplier();
+```
+
+<h3 style="text-align: center;">All Composed Together</h3>
+
+<p align="center">
+  <img src="src/main/resources/collector/tomapcollector.svg" alt="To Map Collector">
 </p>
 
 ### Build Your Own:
