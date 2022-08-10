@@ -244,6 +244,17 @@ public class ImmutableListCollector<T> implements Collector<T, List<T>, Immutabl
 
 * https://www.amazon.com/Mock-Mocking-Bird-Including-Combinatory-ebook/dp/B00A1P096Y/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=
 
+---
+
+<h2 style="text-align: center;">Hit Me Up</h2>
+
+- Twitter -> https://twitter.com/TheJavaImposter
+- Linkedin -> https://www.linkedin.com/in/christopherjcooke/
+- Medium -> https://medium.com/@christopher.jamescooke
+
+<p align="center">
+  <img src="src/main/resources/collector/javaimposterlogo.svg" alt="Java Imposter Logo">
+</p>
 
 
 
