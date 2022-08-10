@@ -146,8 +146,8 @@ few of the JDK supplied Collectors.
 
 ### Collecting into Maps
 
-In order to collect into a `Map`, we basically need to upgrade our accumulator into a higher order
-function, composed of three other functions. These "sub" functions are:
+In order to collect into a `Map`, we need to upgrade our accumulator into a higher order function,
+composed of three other functions. These "sub" functions are:
 
 <h3 style="text-align: center;">Key Mapper</h3>
 
@@ -155,12 +155,8 @@ function, composed of three other functions. These "sub" functions are:
   <img src="src/main/resources/collector/keymapper.svg" alt="Key Mapper">
 </p>
 
-The container supplier is responsible for creating a new mutable container for the result. It has
-the following abstract method signature:
-
-```java
-Supplier<A> supplier();
-```
+The key mapper transforms each element from the stream into a key for the `Map` being collected
+into.
 
 <h3 style="text-align: center;">Value Mapper</h3>
 
@@ -168,12 +164,8 @@ Supplier<A> supplier();
   <img src="src/main/resources/collector/valuemapper.svg" alt="Value Mapper">
 </p>
 
-The container supplier is responsible for creating a new mutable container for the result. It has
-the following abstract method signature:
-
-```java
-Supplier<A> supplier();
-```
+The value mapper transforms each element from the stream into a value for the `Map` being collected
+into.
 
 <h3 style="text-align: center;">Merger</h3>
 
@@ -181,12 +173,9 @@ Supplier<A> supplier();
   <img src="src/main/resources/collector/merger.svg" alt="Merger">
 </p>
 
-The container supplier is responsible for creating a new mutable container for the result. It has
-the following abstract method signature:
-
-```java
-Supplier<A> supplier();
-```
+Any collisions (when two elements produce the same key) are handled by the merger. Many of the
+predefined `Map` collectors just throw an `Exception` unconditionally, but you can easily supply
+your own merge function if the desired behavior is more complex.
 
 <h3 style="text-align: center;">All Composed Together</h3>
 
