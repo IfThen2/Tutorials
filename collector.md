@@ -267,6 +267,10 @@ public class ImmutableListCollector<T> implements Collector<T, List<T>, Immutabl
 
 <h2 style="text-align: center;">Hit Me Up</h2>
 
+<p align="center">
+  <img src="src/main/resources/collector/sociallogos.svg" alt="Social Media Logos">
+</p>
+
 - Twitter -> https://twitter.com/TheJavaImposter
 - Linkedin -> https://www.linkedin.com/in/christopherjcooke/
 - Medium -> https://medium.com/@christopher.jamescooke
