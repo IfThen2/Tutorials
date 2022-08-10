@@ -83,7 +83,7 @@ equivalently during parallel and sequential execution.
 ### The Identity Constraint
 
 <p align="center">
-  <src="src/main/resources/collector/identityconstraint.svg" alt="The Identity Constraint">
+  <img src="src/main/resources/collector/identityconstraint.svg" alt="The Identity Constraint">
 </p>
 
 > The identity constraint says that for any partially accumulated result, combining it with an empty result container must produce an equivalent result. That is, for a partially accumulated result a that is the result of any series of accumulator and combiner invocations, a must be equivalent to
@@ -95,7 +95,7 @@ equivalently during parallel and sequential execution.
 ### The Associativity Constraint
 
 <p align="center">
-  <src="src/main/resources/collector/associativityconstraint.svg" alt="The Associativity Constraint">
+  <img src="src/main/resources/collector/associativityconstraint.svg" alt="The Associativity Constraint">
 </p>
 
 > The associativity constraint says that splitting the computation must produce an equivalent result. That is, for any input elements t1 and t2, the results r1 and r2 in the computation below must be equivalent:
