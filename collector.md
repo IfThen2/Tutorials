@@ -228,6 +228,10 @@ public class ImmutableListCollector<T> implements Collector<T, List<T>, Immutabl
 }
 ```
 
+### Try it Yourself!
+
+<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@IfThen2/Java8StreamCollection?v=1?embed=true"></iframe>
+
 ---
 
 <h2 style="text-align: center;">Resources / Further Reading</h2>
