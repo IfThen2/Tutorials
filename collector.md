@@ -15,7 +15,9 @@ now, let's take a look at the pieces that make up a `Collector`.
 
 ### 1. Container Supplier
 
-![Container Supplier](src/main/resources/collector/supplier.png "Container Supplier")
+<p align="center">
+  <img src="src/main/resources/collector/containersupplier.svg" alt="Container Supplier">
+</p>
 
 The container supplier is responsible for creating a new mutable container for the result. It has
 the following abstract method signature:
@@ -26,7 +28,9 @@ Supplier<A> supplier();
 
 ### 2. Accumulator
 
-![Accumulator](src/main/resources/collector/accumulator.png "Accumulator")
+<p align="center">
+  <img src="src/main/resources/collector/accumulator.svg" alt="Accumulator">
+</p>
 
 The accumulator incorporates data elements into the result container. It has the following abstract
 method signature:
@@ -37,6 +41,10 @@ BiConsumer<A, T> accumulator();
 
 ### 3. Combiner
 
+<p align="center">
+  <img src="src/main/resources/collector/combiner.svg" alt="Combiner">
+</p>
+
 The combiner used (in the Stream framework) during parallel execution. Separate threads will process
 separate sections of the stream, accumulating their partial result into a mutable container. Those
 containers eventually need to be combined into one single result, hence the combiner BinaryOperator.
@@ -46,15 +54,15 @@ It has the following abstract method signature:
 BinaryOperator<A> combiner();
 ```
 
-![Combiner ](src/main/resources/collector/combiner.png "Combiner")
-
 ### 4. Finisher
 
 Performs optional final transformation. Collectors may set (*and the majority do*)
 the `IDENTITY_TRANSFORM` characteristic, in which case the finishing transformation is an identity
 function with an unchecked cast from `A` to `R`.
 
-![Finisher](src/main/resources/collector/finisher.png "Finisher")
+<p align="center">
+  <img src="src/main/resources/collector/finisher.svg" alt="Finisher">
+</p>
 
 ---
 
