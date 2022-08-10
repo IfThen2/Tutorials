@@ -133,7 +133,9 @@ few of the JDK supplied Collectors.
 
 ![JDK Collectors](src/main/resources/collector/jdkcollectors.svg "JDK Collectors")
 
-![JDK Collectors Notes](src/main/resources/collector/jdkcollectornotes.svg "JDK Collectors Notes")
+<p align="center">
+  <img src="src/main/resources/collector/jdkcollectornotes.svg" alt="JDK Collectors Notes">
+</p>
 
 ### Build Your Own:
 
@@ -141,7 +143,7 @@ What if none of the supplied Collectors meet our needs? In that case, implementi
 no problem! Let's create a `Collector` similar to `Collectors.toList`, but that applies a finishing
 step of copying the mutable result container into an `ImmutableList`.
 
-![Custom Collector](src/main/resources/collector/customcollectortable.png "JDK Collectors")
+![Custom Collector](src/main/resources/collector/customcollectortable.svg "JDK Collectors")
 
 ```java
 public class ImmutableListCollector<T> implements Collector<T, List<T>, ImmutableList<T>> {
