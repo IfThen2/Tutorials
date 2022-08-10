@@ -144,7 +144,7 @@ few of the JDK supplied Collectors.
   <img src="src/main/resources/collector/jdkcollectornotes.svg" alt="JDK Collectors Notes">
 </p>
 
-### Collecting into Maps
+<h2 style="text-align: center;">A Special Case: Collecting into Maps.</h2>
 
 In order to collect into a `Map`, we need to upgrade our accumulator into a higher order function,
 composed of three other functions. These "sub" functions are:
@@ -183,7 +183,7 @@ your own merge function if the desired behavior is more complex.
   <img src="src/main/resources/collector/tomapcollector.svg" alt="To Map Collector">
 </p>
 
-### Build Your Own:
+<h2 style="text-align: center;">Build Your Own</h2>
 
 What if none of the supplied Collectors meet our needs? In that case, implementing our own should be
 no problem! Let's create a `Collector` similar to `Collectors.toList`, but that applies a finishing
