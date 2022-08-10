@@ -1,5 +1,5 @@
 ## Welcome to my Tutorials
 
-[Link](https://ifthen2.github.io/Tutorials/functional-interfaces)
+[Functional Interface Reference](https://ifthen2.github.io/Tutorials/functional-interfaces)
 
-[Link](https://ifthen2.github.io/Tutorials/collector)
+[Stream Collector Guide](https://ifthen2.github.io/Tutorials/collector)
