@@ -136,7 +136,7 @@ The associativity constraint is a little more straight-forward. A Collector is c
 associative if splitting (and thus processing the elements in a different order) produces the same
 result.
 
-I think most are familiar with the concept of associativity in algebra.
+I think most are familiar with the concept of associativity in algebra:
 
 ![Algebra Associativity](src/main/resources/collector/associativityalgebra.svg "Algebra Associativity")
 
