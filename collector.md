@@ -230,13 +230,7 @@ public class ImmutableListCollector<T> implements Collector<T, List<T>, Immutabl
 
 ### Try it Yourself!
 
-https://replit.com/@IfThen2/Java8StreamCollection
-
-https://replit.com/@IfThen2/Java8StreamCollection?v=1
-
-<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@IfThen2/Java8StreamCollection?v=1?embed=true"></iframe>
-
-<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@IfThen2/Java8StreamCollection?embed=true"></iframe>
+<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@IfThen2/Java8StreamCollection?embed=true&v=1"></iframe>
 
 ---
 
