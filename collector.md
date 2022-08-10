@@ -13,10 +13,10 @@ in reduction operations*), so we can use `Collector` to avoid that.
 We'll dive deeper into the finer points of *collection* vs *reduction* in a separate tutorial. For
 now, let's take a look at the pieces that make up a `Collector`.
 
-### 1. Container Supplier
+<h3 style="text-align: center;">Container Supplier</h3>
 
 <p align="center">
-  <img src="src/main/resources/collector/containersupplier.svg" alt="Container Supplier">
+  <img src="src/main/resources/collector/supplier.svg" alt="Container Supplier">
 </p>
 
 The container supplier is responsible for creating a new mutable container for the result. It has
@@ -26,7 +26,7 @@ the following abstract method signature:
 Supplier<A> supplier();
 ```
 
-### 2. Accumulator
+<h2 style="text-align: center;">Accumulator</h2>
 
 <p align="center">
   <img src="src/main/resources/collector/accumulator.svg" alt="Accumulator">
@@ -39,7 +39,7 @@ method signature:
 BiConsumer<A, T> accumulator();
 ```
 
-### 3. Combiner
+<h2 style="text-align: center;">Combiner</h2>
 
 <p align="center">
   <img src="src/main/resources/collector/combiner.svg" alt="Combiner">
@@ -54,7 +54,7 @@ It has the following abstract method signature:
 BinaryOperator<A> combiner();
 ```
 
-### 4. Finisher
+<h2 style="text-align: center;">Finisher</h2>
 
 Performs optional final transformation. Collectors may set (*and the majority do*)
 the `IDENTITY_TRANSFORM` characteristic, in which case the finishing transformation is an identity
