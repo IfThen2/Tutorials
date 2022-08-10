@@ -47,10 +47,10 @@ BiConsumer<A, T> accumulator();
   <img src="src/main/resources/collector/combiner.svg" alt="Combiner">
 </p>
 
-The combiner used (in the Stream framework) during parallel execution. Separate threads will process
-separate sections of the stream, accumulating their partial result into a mutable container. Those
-containers eventually need to be combined into one single result, hence the combiner BinaryOperator.
-It has the following abstract method signature:
+The combiner is used (*in the `Stream` framework*) during parallel execution. Separate process
+separate sections of the `Stream`, accumulating their partial result into a mutable container. Those
+containers eventually need to be combined into one single result, hence the combiner. It has the
+following abstract method signature:
 
 ```java
 BinaryOperator<A> combiner();
@@ -74,8 +74,8 @@ Function<A, R> finisher();
 
 <h2 style="text-align: center;">An Example Visualized</h2>
 
-Let's breakdown an example Stream collection process to help understand the different components.
-Note the differences between serial and parallel execution.
+Let's try to visualize an example `Stream` collection process to help understand the different
+components. Also, be sure to note the differences between serial and parallel execution.
 
 ### Serial Collection:
 
@@ -107,6 +107,10 @@ equivalently during parallel and sequential execution.
 > ```
 > -- <cite>JavaDoc</cite>
 
+Essentially, combining a partial result with an empty result should be the same as passing the
+partial result through the identity function. When combining two result containers, only the
+specific contents of the containers should affect the result.
+
 ### The Associativity Constraint
 
 <p align="center">
@@ -128,6 +132,17 @@ equivalently during parallel and sequential execution.
 > ```
 > -- <cite>JavaDoc</cite>
 
+The associativity constraint is a little more straight-forward. A Collector is considered
+associative if splitting (and thus processing the elements in a different order) produces the same
+result.
+
+I think most are familiar with the concept of associativity in algebra.
+
+![Algebra Associativity](src/main/resources/collector/associativityalgebra.svg "Algebra Associativity")
+
+If you stretch your mind a little bit you can look at associativity in collection the same way.
+
+![Associativity Metaphor](src/main/resources/collector/associativitymathmetaphor.svg "Associativity Metaphor")
 
 ---
 
