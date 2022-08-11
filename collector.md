@@ -245,6 +245,9 @@ public class ImmutableListCollector<T> implements Collector<T, List<T>, Immutabl
 
 ### Try it Yourself!
 
+Here is a sample Stream collection using a simple `Collector` implementation. Play around with both
+of them, and run it to see the results!
+
 <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@IfThen2/Java8StreamCollection?embed=true&v=1"></iframe>
 
 ---
