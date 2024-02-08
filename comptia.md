@@ -1910,7 +1910,7 @@ performance of the graphics processing unit (GPU) on the system. It displays gra
 representations and data on GPU utilization, memory usage, and GPU engine activity. Users can
 quickly assess GPU performance and identify processes that are utilizing GPU resources.
 
-![GPU Monitor](src/main/resources/comptia1102/gpu1.png "GPU Monitor 1")
+![GPU Monitor](src/main/resources/comptia1102/gpu1.PNG "GPU Monitor 1")
 
 #### 1.3.1.4 Processes Tab
 
@@ -2006,6 +2006,8 @@ The Event Viewer snap-in is a system utility tool used for viewing and managing 
 Windows systems. Event logs contain information about system events, errors, warnings, and other
 noteworthy occurrences. This tool is essential for system administrators and advanced users for
 troubleshooting issues, diagnosing problems, and monitoring system health.
+
+![Event Viewer](src/main/resources/comptia1102/eventviewer.png "Event Viewer")
 
 **Access Methods:**
 
