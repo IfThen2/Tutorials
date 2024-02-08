@@ -1994,5 +1994,319 @@ as:
 The Users tab facilitates efficient user session management, enhancing system security and
 performance monitoring.
 
-### 1.3.2 Microsoft Management Console (__MMC__) snap-in
+### 1.3.2. Microsoft Management Console (MMC) Snap-ins
 
+Microsoft Management Console (MMC) snap-ins are powerful administrative tools that allow users to
+manage various aspects of their Windows 10 system. Each snap-in provides a specialized interface for
+configuring specific system components and settings.
+
+#### 1.3.2.1. Event Viewer (eventvwr.msc)
+
+The Event Viewer snap-in is a system utility tool used for viewing and managing event logs on
+Windows systems. Event logs contain information about system events, errors, warnings, and other
+noteworthy occurrences. This tool is essential for system administrators and advanced users for
+troubleshooting issues, diagnosing problems, and monitoring system health.
+
+**Access Methods:**
+
+- Press `Windows key + R` to open the Run dialog, type `eventvwr.msc`, and press Enter.
+- Right-click on the Start button, select "Event Viewer" from the context menu.
+- Search for "Event Viewer" in the Windows search bar and click on the app in the results.
+
+#### 1.3.2.2. Disk Management (diskmgmt.msc)
+
+Disk Management snap-in is a Windows utility used for managing disk drives and volumes on your
+computer. It allows users to perform various disk-related tasks such as creating, deleting,
+formatting, and resizing partitions. Additionally, Disk Management provides tools for initializing
+new disks, changing drive letters, and marking partitions as active or inactive.
+
+**Access Methods:**
+
+- Press `Windows key + X` to open the Power User menu, then select "Disk Management."
+- Open the Control Panel, go to "System and Security" > "Administrative Tools," and click on "
+  Computer Management." Then, navigate to "Storage" > "Disk Management."
+
+#### 1.3.2.3. Task Scheduler (taskschd.msc)
+
+The Task Scheduler snap-in is a utility that enables users to automate tasks and processes on their
+Windows system. It allows users to schedule programs, scripts, or commands to run at specific times
+or events, making it useful for automating routine maintenance tasks, backups, and application
+launches.
+
+**Access Methods:**
+
+- Press `Windows key + R` to open the Run dialog, type `taskschd.msc`, and press Enter.
+- Open the Control Panel, go to "System and Security" > "Administrative Tools," and click on "Task
+  Scheduler."
+
+#### 1.3.2.4. Device Manager (devmgmt.msc)
+
+Device Manager snap-in is a system utility tool used for managing hardware devices installed on a
+Windows system. It provides a centralized interface for viewing and configuring device properties,
+updating drivers, troubleshooting device issues, and managing device resources.
+
+**Access Methods:**
+
+- Press `Windows key + X` to open the Power User menu, then select "Device Manager."
+- Open the Control Panel, go to "System and Security" > "System," click on "Device Manager" on the
+  left pane.
+
+#### 1.3.2.5. Certificate Manager (certmgr.msc)
+
+Certificate Manager snap-in is a utility used for managing digital certificates on a Windows system.
+It allows users to view, import, export, and manage certificates for various purposes, including
+secure communication, authentication, and encryption.
+
+**Access Methods:**
+
+- Press `Windows key + R` to open the Run dialog, type `certmgr.msc`, and press Enter.
+- Open the Control Panel, go to "System and Security" > "Administrative Tools," and click on "
+  Certificate Manager."
+
+#### 1.3.2.6. Local Users and Groups (lusrmgr.msc)
+
+Local Users and Groups snap-in is a management tool used for managing user accounts and group
+memberships on a local Windows system. It allows administrators to create, modify, and delete user
+accounts and groups, assign permissions, and manage user passwords.
+
+**Access Methods:**
+
+- Press `Windows key + R` to open the Run dialog, type `lusrmgr.msc`, and press Enter.
+- Open the Control Panel, go to "System and Security" > "Administrative Tools," and click on "Local
+  Users and Groups."
+
+#### 1.3.2.7. Performance Monitor (perfmon.msc)
+
+Performance Monitor snap-in is a system monitoring tool used for analyzing and monitoring system
+performance metrics in real-time. It provides customizable performance counters, graphs, and reports
+to help identify performance bottlenecks, optimize system resources, and troubleshoot performance
+issues.
+
+**Access Methods:**
+
+- Press `Windows key + R` to open the Run dialog, type `perfmon.msc`, and press Enter.
+- Open the Control Panel, go to "System and Security" > "Administrative Tools," and click on "
+  Performance Monitor."
+
+#### 1.3.2.8. Group Policy Editor (gpedit.msc)
+
+Group Policy Editor snap-in is a management tool used for managing group policies on a Windows
+system. It provides a centralized interface for configuring security settings, enforcing policies,
+and controlling user access and permissions across the network.
+
+**Access Methods:**
+
+- Press `Windows key + R` to open the Run dialog, type `gpedit.msc`, and press Enter.
+- Open the Control Panel, go to "System and Security" > "Administrative Tools," and click on "Local
+  Security Policy."
+
+## 1.3.3. Additional Tools
+
+In addition to the Microsoft Management Console (MMC) snap-ins discussed earlier, Windows 10
+provides various additional tools that offer functionalities for system information, resource
+monitoring, system configuration, disk maintenance, and registry management.
+
+### 1.3.3.1. System Information (msinfo32.exe)
+
+System Information is a built-in Windows utility that provides a comprehensive overview of system
+hardware, software, and configuration details. It gathers information about the computer's hardware
+resources, components, installed software, drivers, and system settings. System Information is
+useful for troubleshooting hardware issues, verifying system specifications, and gathering
+information for technical support purposes.
+
+**Access Method:**
+
+- Press `Windows key + R` to open the Run dialog, type `msinfo32.exe`, and press Enter.
+
+### 1.3.3.2. Resource Monitor (resmon.exe)
+
+Resource Monitor is a system monitoring tool that provides real-time insights into the usage of
+system resources such as CPU, memory, disk, and network. It offers detailed information about
+running processes, active network connections, disk activity, and system performance metrics.
+Resource Monitor helps users identify resource-intensive applications, diagnose performance issues,
+and optimize system performance.
+
+**Access Method:**
+
+- Press `Ctrl + Shift + Esc` to open Task Manager, then click on the "Performance" tab and select "
+  Open Resource Monitor" at the bottom.
+
+### 1.3.3.3. System Configuration (msconfig.exe)
+
+System Configuration, also known as msconfig, is a system utility that allows users to configure
+various system startup options and troubleshoot boot-related issues. It provides options to manage
+startup programs, services, boot settings, and system configuration parameters. System Configuration
+is useful for optimizing system startup, diagnosing startup problems, and troubleshooting software
+conflicts.
+
+**Access Method:**
+
+- Press `Windows key + R` to open the Run dialog, type `msconfig.exe`, and press Enter.
+
+### 1.3.3.4. Disk Cleanup (cleanmgr.exe)
+
+Disk Cleanup is a built-in Windows utility that helps users reclaim disk space by removing temporary
+files, system files, and other unnecessary items from their computer. It scans the system for files
+that can be safely deleted and provides options to remove them, freeing up valuable disk space. Disk
+Cleanup is useful for optimizing disk usage, improving system performance, and maintaining system
+cleanliness.
+
+**Access Method:**
+
+- Press `Windows key + R` to open the Run dialog, type `cleanmgr.exe`, and press Enter.
+
+### 1.3.3.5. Disk Defragment (dfrgui.exe)
+
+Disk Defragmenter, also known as dfrgui, is a Windows utility that optimizes the layout of files on
+a disk to improve access times and overall system performance. It rearranges fragmented files and
+free space on the disk, reducing the time it takes to read and write data. Disk Defragmenter is
+useful for maintaining disk health, preventing performance degradation, and improving file system
+efficiency.
+
+**Access Method:**
+
+- Press `Windows key + R` to open the Run dialog, type `dfrgui.exe`, and press Enter.
+
+### 1.3.3.6. Registry Editor (regedit.exe)
+
+Registry Editor is a powerful tool that allows users to view, edit, and modify the Windows Registry,
+a hierarchical database that stores configuration settings and system information. It provides
+access to registry keys and values, allowing users to customize system settings, tweak system
+behavior, and troubleshoot registry-related issues. Registry Editor is a critical tool for advanced
+users and system administrators but should be used with caution as improper changes can potentially
+damage the system.
+
+**Access Method:**
+
+- Press `Windows key + R` to open the Run dialog, type `regedit.exe`, and press Enter.
+
+## 1.4. Microsoft Windows 10 Control Panel Utilities
+
+In various scenarios, understanding and utilizing the appropriate Microsoft Windows 10 Control Panel
+utility can be instrumental. Below are several Control Panel utilities along with their respective
+functionalities and usage scenarios:
+
+### 1.4.1. Internet Options
+
+Internet Options is a Control Panel utility that allows users to configure settings related to their
+internet connection, web browser, and security preferences. It provides options to manage browser
+history, security settings, privacy settings, and more.
+
+### 1.4.2. Devices and Printers
+
+Devices and Printers is a Control Panel utility that provides a centralized location to manage all
+connected devices and printers. It allows users to view, add, remove, and configure both hardware
+devices and printers.
+
+### 1.4.3. Programs and Features
+
+Programs and Features is a Control Panel utility that enables users to view and manage installed
+programs and applications on their Windows 10 system. It provides options to uninstall, repair, or
+change installed programs.
+
+### 1.4.4. Network and Sharing Center
+
+Network and Sharing Center is a Control Panel utility that provides a graphical overview of network
+connections and settings. It allows users to manage network adapters, view network status, set up
+network connections, and troubleshoot network-related issues.
+
+### 1.4.5. System
+
+System is a Control Panel utility that provides information about the computer's hardware, operating
+system, and system settings. It allows users to view and configure system properties, device
+manager, remote settings, and more.
+
+### 1.4.6. Windows Defender Firewall
+
+Windows Defender Firewall is a Control Panel utility that allows users to manage firewall settings
+and control inbound and outbound network traffic. It provides options to create firewall rules,
+allow or block specific programs or ports, and customize firewall profiles.
+
+### 1.4.7. Mail
+
+Mail is a Control Panel utility that allows users to configure and manage email accounts and
+settings. It provides options to add, remove, or modify email accounts, configure server settings,
+and customize email preferences.
+
+### 1.4.8. Sound
+
+Sound is a Control Panel utility that enables users to configure audio devices, playback settings,
+and recording preferences. It provides options to adjust volume levels, set default audio devices,
+configure sound enhancements, and troubleshoot audio issues.
+
+### 1.4.9. User Accounts
+
+User Accounts is a Control Panel utility that allows users to manage user accounts, passwords, and
+account settings on their Windows 10 system. It provides options to create, delete, or modify user
+accounts, change passwords, and configure user privileges.
+
+### 1.4.10. Device Manager
+
+Device Manager is a Control Panel utility that provides a centralized location to view and manage
+hardware devices installed on the computer. It allows users to update device drivers, disable or
+enable devices, view device properties, and troubleshoot hardware issues.
+
+### 1.4.11. Indexing Options
+
+Indexing Options is a Control Panel utility that allows users to manage and customize the indexing
+settings for the Windows Search feature. It provides options to add or remove indexed locations,
+modify advanced indexing options, and troubleshoot indexing-related issues.
+
+### 1.4.12. Administrative Tools
+
+Administrative Tools is a Control Panel utility that provides access to various system
+administration tools and utilities. It includes tools such as Computer Management, Event Viewer,
+Task Scheduler, Services, and more.
+
+### 1.4.13. File Explorer Options
+
+File Explorer Options is a Control Panel utility that allows users to customize and configure
+settings related to File Explorer, the file management tool in Windows 10. It provides options to
+show or hide hidden files, display file extensions, configure general file explorer options, and
+customize view settings.
+
+#### 1.4.13.1. Show Hidden Files
+
+The "Show Hidden Files" option allows users to toggle the visibility of hidden files within File
+Explorer. Hidden files are typically system files or files that the operating system deems
+unnecessary for regular user interaction. Enabling this option will display hidden files alongside
+regular files in File Explorer, making them accessible for viewing or modification.
+
+#### 1.4.13.2. Hide Extensions
+
+The "Hide Extensions" option allows users to toggle the visibility of file extensions within File
+Explorer. File extensions are the suffixes appended to filenames that denote the file type or
+format. Enabling this option will hide file extensions for known file types, making filenames appear
+cleaner and more user-friendly. However, it may also make it harder to differentiate between file
+types at a glance.
+
+#### 1.4.13.3. General Options
+
+The "General Options" section within File Explorer Options allows users to configure various general
+settings related to File Explorer behavior. This may include options such as choosing whether to
+open each folder in the same window or a new window, setting the default folder view, customizing
+the navigation pane, and configuring file operation settings.
+
+#### 1.4.13.4. View Options
+
+The "View Options" section within File Explorer Options allows users to customize the appearance and
+layout of File Explorer. It provides options to choose different view styles such as icons, list,
+details, or tiles, as well as to customize the size and appearance of icons. Users can also
+configure sorting and grouping options, adjust column widths, and set folder options such as whether
+to display full path in the title bar.
+
+### 1.4.14. Power Options
+
+Power Options is a Control Panel utility that allows users to configure power settings and options
+for their Windows 10 system. It provides options to manage power plans, adjust sleep and hibernate
+settings, customize power button actions, and optimize power usage.
+
+#### 1.4.14.1. Hibernate
+
+#### 1.4.14.2. Power Plans
+
+#### 1.4.14.3. Sleep/Suspend
+
+#### 1.4.14.4. Standby
+
+#### 1.4.14.5
