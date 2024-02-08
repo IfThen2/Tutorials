@@ -1802,7 +1802,7 @@ __Key Actions:__
 
 __Importance in Troubleshooting:__
 
-### 1.3.1.2. Startup Tab
+#### 1.3.1.2. Startup Tab
 
 The Startup tab in Task Manager provides information about programs and processes that automatically
 launch when your computer starts up, and the means to manage them. For each program you will see
@@ -1830,7 +1830,7 @@ The Startup tab in Task Manager is important in troubleshooting for several reas
 encountering issues with system performance, slow boot times, or unexpected behavior, reviewing and
 managing startup programs can help identify and resolve problems.
 
-### 1.3.1.3. Performance Tab
+#### 1.3.1.3. Performance Tab
 
 The Performance tab in the Windows Task Manager provides a comprehensive overview of the system's
 performance metrics and resource usage. It is divided into several sections:
@@ -1845,12 +1845,12 @@ monitor performance, diagnose potential bottlenecks, and optimize system respons
 color-coded graph and numerical details make it easy to assess the current CPU load and quickly
 pinpoint resource-intensive tasks.
 
-![Serial Collection](src/main/resources/comptia1102/cpu1.png "CPU Performance 1")
+![CPU Monitor 1](src/main/resources/comptia1102/cpu1.png "CPU Performance 1")
 
 Right-Clicking on the graph allows you to overall CPU utilization, and logical processor
 utilization.
 
-![Serial Collection](src/main/resources/comptia1102/cpu2.png "CPU Performance 2")
+![CPU Monitor 2](src/main/resources/comptia1102/cpu2.png "CPU Performance 2")
 
 __Memory__
 
@@ -1860,7 +1860,7 @@ consumption, while detailed information presents the total installed memory, cur
 the available memory. This empowers users to make informed decisions to enhance overall system
 responsiveness and stability.
 
-![Serial Collection](src/main/resources/comptia1102/memory1.png "Memory Performance 1")
+![Memory Monitor](src/main/resources/comptia1102/memory1.png "Memory Performance 1")
 
 __Disk__
 
@@ -1868,20 +1868,131 @@ The Disk section on the Performance tab in Task Manager provides real-time insig
 system's disk activity. Through a graphical display and data on read and write speeds, users can
 quickly assess the performance and identify processes impacting disk usage.
 
-![Serial Collection](src/main/resources/comptia1102/disk2.png "Disk Performance 1")
+![Disk Monitor](src/main/resources/comptia1102/disk2.png "Disk Performance 1")
 
 __Network__
 
-<center>
- <iframe width="560" 
-         height="315" 
-         src="https://www.canva.com/design/DAF2-CVWWxs/view" 
-         title="YouTube video player" 
-         frameborder="0" 
-         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-         allowfullscreen>
- </iframe>
-</center>
-https://www.canva.com/design/DAF2-CVWWxs/view
+Under the Performance tab in Task Manager, you'll find individual subsections for each network
+interface present on your system, such as Ethernet, Wi-Fi, or any additional network adapters. These
+subsections offer real-time monitoring of network activity specific to each interface, allowing
+users to analyze and manage network resources efficiently.
 
-<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF2-CVWWxs&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">  </iframe></div><a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF2-CVWWxs&#x2F;view?utm_content=DAF2-CVWWxs&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">services tab troubleshooting</a> by Christopher J Cooke
+![Network Monitor](src/main/resources/comptia1102/networkmonitor.gif "Network Monitor")
+
+Each network interface subsection typically includes:
+
+- __Network Utilization Graph__: A graphical representation illustrating the utilization of the
+  specific network interface over time. This graph shows data transmission and reception rates,
+  allowing users to monitor network activity trends and identify spikes or periods of high traffic.
+
+- __Network Adapter Details__: Information about the selected network interface, including its name,
+  connection type, and status (e.g., connected, disconnected). This section provides essential
+  details about the network adapter's configuration and current operational state.
+
+- __Speed and Data Usage__: Real-time data on the current speed of the network interface (in Mbps or
+  Gbps)
+  and the total amount of data transmitted and received through that interface. These metrics help
+  users gauge the intensity of network traffic and assess the impact on overall system performance.
+
+- __Processes with Network Activity__: A list of processes and applications actively utilizing the
+  selected network interface. This list displays information such as send and receive rates, as well
+  as the total amount of data transferred by each process. Users can use this information to
+  identify resource-intensive processes and manage network usage effectively.
+
+By providing detailed insights into the performance of individual network interfaces, these
+subsections enable users to monitor network activity, diagnose network-related issues, and optimize
+network performance as needed.
+
+__GPU__
+
+The GPU monitoring section in Task Manager provides real-time insights into the usage and
+performance of the graphics processing unit (GPU) on the system. It displays graphical
+representations and data on GPU utilization, memory usage, and GPU engine activity. Users can
+quickly assess GPU performance and identify processes that are utilizing GPU resources.
+
+![GPU Monitor](src/main/resources/comptia1102/gpu1.png "GPU Monitor 1")
+
+#### 1.3.1.4 Processes Tab
+
+The Processes tab in Task Manager offers detailed insights into the running processes on your
+Windows 10 system. Processes represent individual programs or services currently active in memory.
+Understanding and managing processes can aid in troubleshooting system issues, identifying
+resource-intensive applications, and improving overall system performance.
+
+__Process List__
+
+The Process List displays a comprehensive list of all running processes, including both
+user-initiated applications and system services. Each process entry provides valuable information
+such as:
+
+- __Name__: Identifies the name of the process.
+    - Example: `chrome.exe`, `explorer.exe`, `svchost.exe`.
+- __PID__ (Process ID): Displays the unique identifier for each process.
+    - Example: `1234`.
+- __CPU Usage__: Indicates the percentage of CPU resources consumed by each process.
+    - Example: `10%`.
+- __Memory Usage__: Represents the amount of memory (RAM) utilized by each process.
+    - Example: `100 MB`.
+- __Description__: Provides a brief description of the process and its associated application or
+  service.
+    - Example: `Google Chrome`, `Windows Explorer`.
+
+__Managing Processes__
+
+Task Manager offers several actions to manage processes effectively, including:
+
+- __End Task__: Terminate a selected process that is unresponsive or causing issues.
+- __End Process Tree__: Terminate the selected process and all its child processes.
+- __Set Priority__: Adjust the priority level of a process to allocate more or fewer system
+  resources.
+- __Create Dump File__: Generate a dump file for a selected process, which can aid in diagnosing
+  application crashes or errors.
+
+__Performance Metrics__
+
+The Processes tab also provides real-time performance metrics for CPU and memory usage, allowing
+users to monitor resource utilization and identify potential bottlenecks. The sortable columns
+enable users to prioritize processes based on their impact on system performance.
+
+#### 1.3.1.5 Users Tab
+
+The Users tab in Task Manager displays information about active user sessions on the system. It
+provides insights into user activity, resource usage, and session status, making it a valuable tool
+for system administrators and troubleshooting purposes.
+
+__User Sessions__
+
+The User Sessions section lists all active user sessions currently logged into the system. Each
+session entry includes:
+
+- __Username__: Identifies the username associated with the session.
+    - Example: `JohnDoe`, `AdminUser`.
+- __Session ID__: Displays a unique identifier for each user session.
+    - Example: `1`, `2`.
+- __Session Status__: Indicates whether the session is active or disconnected.
+    - Example: `Active`, `Disconnected`.
+- __Session Type__: Specifies the type of session, such as console or remote desktop.
+    - Example: `Console`, `Remote`.
+
+__Resource Usage__
+
+The Resource Usage section provides insights into resource consumption for each user session,
+including CPU and memory usage. By monitoring resource usage per session, administrators can
+identify heavy resource consumers and optimize system performance accordingly.
+
+__Session Management__
+
+Task Manager offers session management capabilities, allowing administrators to perform actions such
+as:
+
+- __Disconnect User__: Disconnect a user session without logging them out.
+- __Log Off User__: Log off a user session, terminating all active processes and freeing up system
+  resources.
+- __Send Message__: Send a message to a specific user session for communication or notification
+  purposes.
+
+The Users tab facilitates efficient user session management, enhancing system security and
+performance monitoring.
+
+### 1.3.2 Microsoft Management Console (__MMC__) snap-in
+
